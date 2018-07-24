@@ -10,10 +10,6 @@ phases:
         commands:
             - echo Build started on `date`
             - ng build --prod
-    post_build:
-         commands:
-            - aws s3 sync --delete dist/angular-assignment-repo s3://angular-deployment-for-assignment
-            - echo Build completed on `date`
 artifacts:
     files:
         - '**/*'
